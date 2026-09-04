@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>السوق الحرة</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="wrap">
+    <h1>🛒 السوق الحرة</h1>
+    <p class="subtitle">دكانك القديم... واسمك اللي هتعمله في السوق</p>
+
+    <div id="hud">
+      <span id="day-label">اليوم: 1</span>
+      <span id="cash-label">الفلوس: 0 جنيه</span>
+    </div>
+
+    <h2>السوق</h2>
+    <div id="market-list"></div>
+
+    <button id="next-day-btn" class="btn next">🌙 نهاية اليوم - التالي ▶</button>
+
+    <h2>المخزن بتاعك</h2>
+    <div id="inventory-list">
+      <p class="empty">المخزن فاضي لسه</p>
+    </div>
+
+    <div id="toast" class="toast hidden"></div>
+  </div>
+
+  <script src="{{ url_for('static', filename='game.js') }}"></script>
+</body>
+</html>
